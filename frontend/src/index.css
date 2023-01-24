@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +116,7 @@ h3 {
 
 .form-group {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .form-group input,
@@ -375,6 +375,14 @@ footer {
   border-color: #000 transparent #555 transparent;
   border-radius: 50%;
   animation: spin 1.2s linear infinite;
+}
+
+.showPassword {
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  right: 4%;
+  object-fit: cover;
 }
 
 @keyframes spin {
