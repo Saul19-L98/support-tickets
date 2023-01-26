@@ -27,11 +27,10 @@ app.use("/api/tickets", require("./routes/ticketRoute.js"));
 //Serve Fronted
 if (process.env.NODE_ENV && process.env.NODE_ENV === "production") {
   //Set build folder as static
-  app.use(
-    express.static(
-      path.join(__dirname, "../", "frontend", "build", "index.html")
-    )
-  );
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(__dirname, "../", "frontend", "build", "index.html");
+  });
 } else {
   app.get("/", (req, res) => {
     res.json({ message: "Welcome to the Support Desk API" });
