@@ -83,7 +83,7 @@ function Ticket() {
   }
 
   return (
-    <div className="ticket-page">
+    <div className="ticket-page" style={{ paddingBottom: "2rem" }}>
       <header className="ticket-header">
         <BackButton url="/tickets" />
         <h2>
