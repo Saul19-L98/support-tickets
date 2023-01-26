@@ -30,7 +30,6 @@ function Login() {
       toast.error(message);
     }
     //Redirect when logged in
-    console.log(isSuccess);
     if (isSuccess && user) {
       toast.success("Log in Successful 😃");
       navigate("/");
